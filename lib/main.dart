@@ -284,25 +284,25 @@ Widget BookStudies(BookStudy bookStudy) {
                 color: bookStudy.background,
                 borderRadius: BorderRadius.circular(20),
               )),
-          Center(
-            child: Container(
+          Container(
+            height: 220,
+            decoration: BoxDecoration(
+              color: bookStudy.background,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.1),
+                  spreadRadius: 3,
+                  blurRadius: 7,
+                  offset: Offset(0, 5),
+                )
+              ],
+            ),
+            child: Center(
+              child: Image.asset(
+                'lib/assets/${bookStudy.bookImgPath}',
                 width: 115,
-                // height: 100,
-                decoration: BoxDecoration(
-                  color: bookStudy.background,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
-                      spreadRadius: 3,
-                      blurRadius: 7,
-                      offset: Offset(0, 5),
-                    )
-                  ],
-                ),
-                child: Image.asset(
-                  'lib/assets/${bookStudy.bookImgPath}',
-                )),
-          ),
+              ),
+            )),
           Positioned(
             right: 20,
             top: 20,
